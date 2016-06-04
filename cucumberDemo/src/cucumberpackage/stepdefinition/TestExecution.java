@@ -61,7 +61,9 @@ public class TestExecution {
 
 	@Then("^user can see logout button$")
 	public void user_can_see_logout_button() throws Throwable {
-	   
+	  if(driver.findElement(By.xpath("//img[@src='images/admin_but_03.jpg']")).isDisplayed()){
+		  System.out.println("log out displayed");
+	  }
 	}
 
 	@Then("^user get an alert message as invalid username or password$")
